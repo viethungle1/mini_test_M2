@@ -24,7 +24,7 @@ public class Meat extends Material {
 
     @Override
     public double getAmount() {
-        return getCost()*getAmount();
+        return getCost()*this.weight;
     }
 
     @Override
@@ -44,13 +44,13 @@ public class Meat extends Material {
         double rate = RATE;
         double rateEX = RATE_EX;
         if (day.isBefore(getmanufacturingDate())) {
-            realCost = getCost()+1;
+            realCost = getAmount()+1;
         }else if (day.isAfter(getExpiryDate())) {
             realCost = ZERO;
         } else if ((getExpiryDate().minusDays(LV1)).isAfter(day)) {
-            realCost = getCost()* RATE;
+            realCost = getAmount()* RATE;
         } else {
-            realCost = getCost()* RATE_EX;
+            realCost = getAmount()* RATE_EX;
         }
         return realCost;
 

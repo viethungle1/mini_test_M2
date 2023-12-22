@@ -3,16 +3,16 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Material flour1 = new CrispyFlour("1", "F1", LocalDate.of(2019, 12, 1), 140, 100);
-        Material flour2 = new CrispyFlour("2", "F2", LocalDate.of(2020, 6, 1), 130, 100);
-        Material flour3 = new CrispyFlour("3", "F3", LocalDate.of(2021, 12, 1), 120, 100);
-        Material flour4 = new CrispyFlour("4", "F4", LocalDate.of(2023, 6, 1), 110, 100);
-        Material flour5 = new CrispyFlour("5", "F5", LocalDate.of(2023, 12, 25), 100, 100);
-        Material meat1 = new Meat("1", "M1", LocalDate.of(2023, 12, 30), 500, 10);
-        Material meat2 = new Meat("2", "M2", LocalDate.of(2023, 12, 10), 1000, 20);
-        Material meat3 = new Meat("3", "M3", LocalDate.of(2023, 12, 15), 250, 5);
-        Material meat4 = new Meat("4", "M4", LocalDate.of(2023, 12, 20), 1500, 30);
-        Material meat5 = new Meat("5", "M5", LocalDate.of(2023, 12, 10), 2000, 40);
+        Material flour1 = new CrispyFlour("1", "F1", LocalDate.of(2019, 12, 1), 50, 5);
+        Material flour2 = new CrispyFlour("2", "F2", LocalDate.of(2020, 6, 1), 40, 5);
+        Material flour3 = new CrispyFlour("3", "F3", LocalDate.of(2021, 12, 1), 30, 5);
+        Material flour4 = new CrispyFlour("4", "F4", LocalDate.of(2023, 6, 1), 20, 5);
+        Material flour5 = new CrispyFlour("5", "F5", LocalDate.of(2023, 12, 25),10 , 5);
+        Material meat1 = new Meat("1", "M1", LocalDate.of(2023, 12, 30), 100, 1);
+        Material meat2 = new Meat("2", "M2", LocalDate.of(2023, 12, 10), 110, 2);
+        Material meat3 = new Meat("3", "M3", LocalDate.of(2023, 12, 15), 105, 3);
+        Material meat4 = new Meat("4", "M4", LocalDate.of(2023, 12, 20), 130, 4);
+        Material meat5 = new Meat("5", "M5", LocalDate.of(2023, 12, 10), 140, 5);
         ArrayList<Material> materials = new ArrayList<>();
         materials.add(flour1);
         materials.add(flour2);
@@ -52,7 +52,7 @@ public class Main {
 
     private static void different(ArrayList<Material> materials) {
         for (Material i : materials) {
-            double result = i.getCost()- i.getRealMoney();
+            double result = i.getAmount()- i.getRealMoney();
             System.out.println("Today " + i.getName() + " DicountCost= " + result);
         }
     }

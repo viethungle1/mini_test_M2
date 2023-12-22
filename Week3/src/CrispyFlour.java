@@ -52,15 +52,15 @@ public class CrispyFlour extends Material {
         double rateEx4 = RATE_EX_4;
 //        0.6
         if (day.isBefore(getmanufacturingDate())) {
-            realCost = getCost()+1;
+            realCost = getAmount()+1;
         } else if (day.isAfter(getExpiryDate())) {
             realCost = ZERO;
         } else if ((getExpiryDate().minusMonths(LV1)).isBefore(day)) {
-            realCost = getCost()* RATE_EX_4;
+            realCost = getAmount()* RATE_EX_4;
         } else if ((getExpiryDate().minusMonths(LV2)).isBefore(day)) {
-            realCost = getCost()* RATE_EX_2;
+            realCost = getAmount()* RATE_EX_2;
         } else {
-            realCost = getCost()* RATE;
+            realCost = getAmount()* RATE;
         }
         return realCost;
     }
