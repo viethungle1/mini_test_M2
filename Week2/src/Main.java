@@ -44,5 +44,6 @@ public class Main {
         System.out.println("Số sách category Viễn tưởng 1: "+count2);
         System.out.println("Số sách viễn tưởng giá nhỏ hơn 100: "+count3);
     }
+
 }
 
