@@ -2,6 +2,9 @@ import java.time.LocalDate;
 import java.util.*;
 
 public class Main {
+
+    public static final int EROR = -1;
+
     public static void main(String[] args) {
         Material flour1 = new CrispyFlour("1", "F1", LocalDate.of(2019, 12, 1), 50, 5);
         Material flour2 = new CrispyFlour("2", "F2", LocalDate.of(2020, 6, 1), 40, 5);
@@ -36,7 +39,7 @@ public class Main {
             choice = scanner.nextInt();
             switch (choice){
                 case 1:
-                    System.out.println("Total of material: " + totalCost(materials)+"$");
+                    System.out.println("Total of material: " + totalAmount(materials)+"$");
                     break;
                 case 2:
                     collate(materials);
@@ -53,7 +56,13 @@ public class Main {
     private static void different(ArrayList<Material> materials) {
         for (Material i : materials) {
             double result = i.getAmount()- i.getRealMoney();
-            System.out.println("Today " + i.getName() + " DicountCost= " + result);
+            if (result==i.getAmount()) {
+                System.out.println(i.getName()+ " quá hạn sử dụng");
+            } else if (result== EROR) {
+                System.out.println(i.getName()+ " nhập sai ngày sản xuất");
+            } else {
+                System.out.println("Today " + i.getName() + " Dicount= " + result);
+            }
         }
     }
     private static void collate(ArrayList<Material> materials) {
@@ -68,7 +77,7 @@ public class Main {
             System.out.println(i);
         }
     }
-    private static int totalCost (ArrayList<Material> a) {
+    private static int totalAmount (ArrayList<Material> a) {
         int total=0;
         for (Material i : a) {
             total += i.getAmount();
