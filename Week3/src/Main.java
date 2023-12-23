@@ -71,7 +71,7 @@ public class Main {
     private static int totalCost (ArrayList<Material> a) {
         int total=0;
         for (Material i : a) {
-            total += i.getCost();
+            total += i.getAmount();
         }
         return total;
     }
