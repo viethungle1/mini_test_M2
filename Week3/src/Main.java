@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 import java.util.*;
-
 public class Main {
     public static final int EROR = -1;
     public static void main(String[] args) {
@@ -68,10 +67,15 @@ public class Main {
     }
 
     private static void removeMaterial(ArrayList<Material> materials) {
-        System.out.println("Enter the <Position> to remove material");
+        System.out.println("Enter the ID to remove material");
         Scanner scanner3 = new Scanner(System.in);
-        int pick = scanner3.nextInt();
-        materials.remove(pick);
+        String pick = scanner3.nextLine();
+        for (int i = 0; i < materials.size(); i++) {
+            if (materials.get(i).getId().equals(pick)){
+                materials.remove(materials.get(i));
+            }
+        }
+
     }
     private static void addNewMaterial(ArrayList<Material> materials) {
         System.out.println("Enter <F> or <M> to added materials");
