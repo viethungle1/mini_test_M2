@@ -21,7 +21,7 @@ public class CrispyFlour extends Material {
         return quantily;
     }
 
-    public void setQuantily(int quantily) {
+    public void setQuantily(double quantily) {
         this.quantily = quantily;
     }
 

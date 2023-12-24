@@ -54,6 +54,6 @@ public abstract class Material implements Discount {
 
     @Override
     public String toString() {
-        return "name="+ name +" manufacturingDate=" + manufacturingDate + ", cost=" + cost;
+        return "id="+id+ " name="+ name +" manufacturingDate=" + manufacturingDate + ", cost=" + cost;
     }
 }
