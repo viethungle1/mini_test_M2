@@ -1,3 +1,5 @@
+package Material;
+
 import java.time.LocalDate;
 public class Meat extends Material {
     public static final double RATE = 0.9;

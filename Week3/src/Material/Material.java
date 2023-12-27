@@ -1,3 +1,7 @@
+package Material;
+
+import Procedure.Discount;
+
 import java.time.LocalDate;
 
 public abstract class Material implements Discount {
