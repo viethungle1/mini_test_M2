@@ -1,7 +1,10 @@
 package Material;
 
+import Material.Material;
+
+import java.io.Serializable;
 import java.time.LocalDate;
-public class Meat extends Material {
+public class Meat extends Material implements Serializable {
     public static final double RATE = 0.9;
     public static final double RATE_EX = 0.7;
     public static final int ZERO = 0;

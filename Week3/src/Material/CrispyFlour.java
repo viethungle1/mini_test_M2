@@ -1,8 +1,11 @@
 package Material;
 
+import Material.Material;
+
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class CrispyFlour extends Material {
+public class CrispyFlour extends Material implements Serializable {
     public static final int ZERO = 0;
     public static final double RATE_EX_2 = 0.8;
     public static final double RATE_EX_4 = 0.6;

@@ -1,11 +1,14 @@
 package Manager;
+import Material.CrispyFlour;
 import Material.Material;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
-import Material.*;
+
+import Material.Meat;
+
 public class MaterialManager {
     public static final int ERROR = -1;
     public static void removeMaterial(ArrayList<Material> materials) {

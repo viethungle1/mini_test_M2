@@ -2,9 +2,10 @@ package Material;
 
 import Procedure.Discount;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public abstract class Material implements Discount {
+public abstract class Material implements Discount, Serializable {
     private String id;
     private String name;
     private LocalDate manufacturingDate;
